@@ -28,6 +28,7 @@ $softwareList = @(
   "junegunn.fzf",
   "JesseDuffield.lazygit",
   "voidtools.Everything",
+  "VSCodium.VSCodium",
   "Mozilla.Firefox",
   "Microsoft.PowerToys",
   "OpenWhisperSystems.Signal",
