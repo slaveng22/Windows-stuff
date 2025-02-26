@@ -55,9 +55,6 @@ foreach ($packageId in $softwareList)
         
     winget install -e --id $packageId --source winget --silent --accept-source-agreements --accept-package-agreements
 
-    # Execute the Winget command
-    Invoke-Expression $wingetCommand
-
     Write-Host "$packageId installed successfully."
   } catch
   {
