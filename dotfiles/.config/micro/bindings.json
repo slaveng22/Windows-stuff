@@ -1,0 +1,12 @@
+{
+    "Alt-#": "lua:comment.comment",
+    "Alt-/": "lua:comment.comment",
+    "Ctrl-e": "lua:filemanager.toggle_tree",
+    "Ctrl-d": "lua:filemanager.prompt_delete_at_cursor",
+    "CtrlUnderscore": "lua:comment.comment",
+    "Alt-e": "CommandMode",
+    "CtrlAltLeft": "PreviousTab",
+    "CtrlAltRight": "NextTab",
+    "Ctrl-r": "command-edit:replace",
+    "CtrlAlt-r": "command-edit:replaceall",
+}

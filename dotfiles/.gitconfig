@@ -1,0 +1,34 @@
+[user]
+    name = slaveng22
+    email = 117160808+slaveng22@users.noreply.github.com
+    signingkey = ~/.ssh/id_rsa_github.pub
+
+[core]
+    sshCommand = ssh -i ~/.ssh/id_rsa_github.pub
+    editor = nvim
+    pager = less -FX
+
+[push]
+    default = current
+
+[pull]
+    rebase = true
+
+[diff]
+    tool = nvimdiff
+
+[merge]
+    tool = nvimdiff
+    conflictstyle = diff3
+
+[commit]
+    gpgSign = true
+
+[tag]
+    forceSignAnnotated = true
+
+[init]
+    defaultBranch = main
+
+[url "git@github.com:"]
+    insteadOf = https://github.com/
