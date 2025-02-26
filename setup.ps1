@@ -33,7 +33,8 @@ else
 
 # Install software
 $softwareList = @(
-  "Microsoft.PowerShell"
+  "Microsoft.WindowsTerminal",
+  "Microsoft.PowerShell",
   "Git.Git",
   "Neovim.Neovim",
   "junegunn.fzf",
