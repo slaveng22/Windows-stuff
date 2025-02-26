@@ -89,8 +89,11 @@ Write-Host "Software installation completed."
 
 # Copy config file
 Copy-Item -Path .\dotfiles\Microsoft.PowerShell_profile.ps1 -Destination $env:USERPROFILE\Documents\PowerShell -Force
-Copy-Item -Path .\dotfiles\settings.json -Destination $ENV:USERPROFILE\AppData\Local\Packages\Microsoft.WindowsTerminal_8wekyb3d8bbwe\LocalState -Force
-Copy-Item -Path .\dotfiles\.config\micro\* -Destination $ENV:USERPROFILE\.config\micro -Recurse -Force
-Copy-Item -Path .\dotfiles\.config\fastfetch\config.jsonc -Destination $ENV:USERPROFILE\.config\fastfetch -Force
+Copy-Item -Path .\dotfiles\settings.json -Destination $env:USERPROFILE\AppData\Local\Packages\Microsoft.WindowsTerminal_8wekyb3d8bbwe\LocalState -Force
+Copy-Item -Path .\dotfiles\.config\micro\* -Destination $env:USERPROFILE\.config\micro -Recurse -Force
+Copy-Item -Path .\dotfiles\.config\fastfetch\config.jsonc -Destination $env:USERPROFILE\.config\fastfetch -Force
 Copy-Item -Path .\dotfiles\.gitconfig -Destination $env:USERPROFILE -Force
-Copi-Item -Path .\images\* -Destination $ENV:USERPROFILE\Pictures -Recurse -Force
+Copi-Item -Path .\images\* -Destination $env:USERPROFILE\Pictures -Recurse -Force
+git clone git@github.com:slaveng22/WorkMadeEasy_Module.git $env:USERPROFILE\Documents\PowerShell\Modules\WorkMadeEasy
+Unblock-File -Path $env:USERPROFILE\Documents\PowerShell\Modules\WorkMadeEasy\WorkMadeEasy.psd1
+Unblock-File -Path $env:USERPROFILE\Documents\PowerShell\Modules\WorkMadeEasy\WorkMadeEasy.psm1
