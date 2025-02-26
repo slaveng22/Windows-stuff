@@ -25,12 +25,8 @@ $softwareList = @(
   "Microsoft.WindowsTerminal",
   "Microsoft.PowerShell",
   "Git.Git",
-  "Neovim.Neovim",
   "junegunn.fzf",
-  "sharkdp.fd",
-  "cURL.cURL",
   "JesseDuffield.lazygit",
-  "Chocolatey.Chocolatey",
   "voidtools.Everything",
   "Mozilla.Firefox",
   "Microsoft.PowerToys",
@@ -68,12 +64,6 @@ foreach ($packageId in $softwareList)
     Write-Error "Failed to install $packageId $($_.Exception.Message)"
   }
 }
-# Install Nerd Fonts
-choco install nerd-fonts-hack
-
-# Install LazyVim
-git clone https://github.com/LazyVim/starter $env:LOCALAPPDATA\nvim
-Remove-Item $env:LOCALAPPDATA\nvim\.git -Recurse -Force
 
 Write-Host "Software installation completed."
 
@@ -83,7 +73,8 @@ Copy-Item -Path .\dotfiles\settings.json -Destination $env:USERPROFILE\AppData\L
 Copy-Item -Path .\dotfiles\.config\micro\* -Destination $env:USERPROFILE\.config\micro -Recurse -Force
 Copy-Item -Path .\dotfiles\.config\fastfetch\config.jsonc -Destination $env:USERPROFILE\.config\fastfetch -Force
 Copy-Item -Path .\dotfiles\.gitconfig -Destination $env:USERPROFILE -Force
-Copi-Item -Path .\images\* -Destination $env:USERPROFILE\Pictures -Recurse -Force
-git clone git@github.com:slaveng22/WorkMadeEasy_Module.git $env:USERPROFILE\Documents\PowerShell\Modules\WorkMadeEasy
+Copy-Item -Path .\images\* -Destination $env:USERPROFILE\Pictures -Recurse -Force
+git clone git@github.com:slaveng22/WorkMadeEasy_Module.git
+Copy-Item -Path .\WorkMadeEasy_Module\WorkMadeEasy -Destination $env:USERPROFILE\Documents\PowerShell\Modules\WorkMadeEasy -Recurse -Force
 Unblock-File -Path $env:USERPROFILE\Documents\PowerShell\Modules\WorkMadeEasy\WorkMadeEasy.psd1
 Unblock-File -Path $env:USERPROFILE\Documents\PowerShell\Modules\WorkMadeEasy\WorkMadeEasy.psm1
