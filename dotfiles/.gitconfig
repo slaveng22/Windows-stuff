@@ -5,21 +5,12 @@
 
 [core]
     sshCommand = ssh -i ~/.ssh/id_rsa_github.pub
-    editor = nvim
-    pager = less -FX
 
 [push]
     default = current
 
 [pull]
     rebase = true
-
-[diff]
-    tool = nvimdiff
-
-[merge]
-    tool = nvimdiff
-    conflictstyle = diff3
 
 [commit]
     gpgSign = true
