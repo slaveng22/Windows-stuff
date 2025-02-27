@@ -4,7 +4,7 @@
     signingkey = ~/.ssh/id_rsa_github
 
 [core]
-    sshCommand = ssh -i ~/.ssh/id_rsa_github
+    sshCommand = C:/Windows/System32/OpenSSH/ssh.exe -i ~/.ssh/id_rsa_github
 
 [push]
     default = current
